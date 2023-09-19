@@ -1,12 +1,12 @@
 # Clone do ChatGPT
 
-Este é um projeto que implementa um clone simplificado do ChatGPT usando a API da OpenAI. O sistema consiste em uma aplicação Node.js como backend que lida com solicitações para a API da OpenAI e um frontend em JavaScript que permite aos usuários interagir com o modelo.
+Este é um projeto que implementa um clone simplificado do ChatGPT usando a API da OpenAI. O sistema consiste em uma aplicação Node.js como backend que lida com solicitações para a API da OpenAI e um frontend com React que permite aos usuários interagir com o modelo.
 
 ## Pré-requisitos
 
 Antes de começar, certifique-se de ter as seguintes dependências instaladas:
 
-- Node.js: [https://nodejs.org/](https://nodejs.org/)
+- Node.js: [https://nodejs.org/](https://nodejs.org/) (v18.0 ou superior)
 - npm (gerenciador de pacotes do Node.js): [https://www.npmjs.com/](https://www.npmjs.com/)
 - Conta na OpenAI e acesso à API: [https://beta.openai.com/signup/](https://beta.openai.com/signup/)
 
@@ -15,32 +15,43 @@ Antes de começar, certifique-se de ter as seguintes dependências instaladas:
 1. Clone este repositório para o seu ambiente local:
 
    ```bash
-   git clone https://github.com/seu-nome-de-usuario/clone-chatgpt.git
-2. Navegue até o diretório do projeto:
+   git clone https://github.com/brunacsilva99/ChatGPT-Clone.git
+2. Navegue até o diretório do back-end do projeto:
 
    ```bash
-   cd clone-chatgpt
+   cd ChatGPT-Clone/Server
 3. Instale as dependências do backend:
 
    ```bash
    npm install
 4. Configure suas credenciais da OpenAI no arquivo .env:
-   Crie um arquivo .env na raiz do projeto e adicione suas credenciais da API da OpenAI:
+   Crie um arquivo .env em ChatGPT-Clone/Server e adicione suas credenciais da API da OpenAI:
 
    ```makefile
    OPENAI_API_KEY=SUA_API_KEY_AQUI
    PORT=5555
-
-## Uso
-
-1. Para iniciar o servidor Node.js, utilize o seguinte comando:
+5. Inicie o servidor:
 
    ```bash
    npm start
-2. Para acessar o frontend em seu navegador:
-   Abra o arquivo index.html localizado no diretório frontend em seu navegador ou hospede-o em um servidor web.
 
-Comece a interagir com o ChatGPT Clone!
+6. Agora, configure a interface de usuário React. Abra outra janela do terminal e vá para a pasta raiz do front-end do projeto:
+
+   ```bash
+   cd ChatGPT-Clone/Web
+7. Instale as dependências do cliente:
+
+   ```bash
+   npm install
+8. Inicie o cliente React:
+
+   ```bash
+   npm start
+9. Acesse o aplicativo em seu navegador em http://localhost:3000.
+
+## Uso
+
+Após configurar o projeto, você poderá usar a interface de chat para interagir com o ChatGPT Clone e ver as respostas geradas pela API da OpenAI.
 
 ## Personalização
 

@@ -20,7 +20,7 @@ module.exports = {
         catch (e) {
             return res.status(400).json({
                 sucess: false,
-                error: e.response ? e.response : "There was an error on the server"
+                error: e.response ? e.response.data : "There was an error on the server"
             })
         }
     }
