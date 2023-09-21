@@ -1,12 +1,15 @@
 // This code is for v4 of the openai package: npmjs.com/package/openai
-const {Configuration, OpenAIApi} = require ("openai") //import OpenAI from "openai";
+const OpenAI = require("openai")//import OpenAI from "openai";
+ 
+require("dotenv").config()
 
 module.exports = class openai{
     static configuration(){
-       const configuration = new Configuration({
-            apiKey: process.env.OPENAI_API_KEY,
-        });
-        return new OpenAIApi(this.configuration)
+        const openai = new OpenAI({
+            organization: "org-W0fIIClVA99If2WmjFk2YrOb",
+            apiKey: process.env.OPENAI_API_KEY
+          })
+        return openai
     }
 
     static textCompletion({prompt}){
